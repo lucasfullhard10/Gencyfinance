@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <radialGradient id="bgGlow" cx="20%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#0f2b38"/>
+      <stop offset="40%" stop-color="#0c1926"/>
+      <stop offset="100%" stop-color="#060a12"/>
+    </radialGradient>
+    <linearGradient id="barGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="60%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="fGrad" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#f0fdf4"/>
+      <stop offset="75%" stop-color="#a7f3d0"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#059669" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0.5"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGlow)"/>
+  <rect x="2" y="2" width="508" height="508" rx="126" stroke="url(#borderGrad)" stroke-width="4"/>
+
+  <!-- Ambient Light Streak -->
+  <path d="M 64 360 C 140 280 280 200 448 100" stroke="#10b981" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Main "F" Body -->
+  <g filter="url(#softGlow)">
+    <!-- Main stem and top arms of F -->
+    <path d="M 160 120 
+             C 160 112, 168 104, 180 104 
+             L 360 104 
+             C 372 104, 380 112, 376 126 
+             L 360 168 
+             C 356 178, 348 184, 336 184 
+             L 246 184 
+             L 246 226 
+             L 316 226 
+             C 328 226, 336 234, 332 248 
+             L 320 284 
+             C 316 294, 306 300, 294 300 
+             L 246 300 
+             L 246 392 
+             C 246 404, 238 412, 226 412 
+             L 180 412 
+             C 168 412, 160 404, 160 392 
+             Z" 
+          fill="url(#fGrad)"/>
+
+    <!-- Ascending Financial Growth Bars -->
+    <!-- Bar 1 (Lowest) -->
+    <rect x="254" y="344" width="28" height="68" rx="12" fill="url(#barGrad)"/>
+    <!-- Bar 2 -->
+    <rect x="294" y="316" width="28" height="96" rx="12" fill="url(#barGrad)"/>
+    <!-- Bar 3 -->
+    <rect x="334" y="280" width="28" height="132" rx="12" fill="url(#barGrad)"/>
+    <!-- Bar 4 (Highest) -->
+    <rect x="374" y="240" width="28" height="172" rx="12" fill="url(#barGrad)"/>
+  </g>
+</svg>
